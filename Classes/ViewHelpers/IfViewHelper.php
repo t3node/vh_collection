@@ -34,7 +34,7 @@ class Tx_VhCollection_ViewHelper_IfViewHelper extends Tx_Fluid_Core_ViewHelper_A
 	 *
 	 * @var array
 	 */
-	protected $compareOperators = array('>=','<=','!=','>','<','=');
+	protected $compareOperators = array('>=','<=','!=','>','<','==');
 
 	/**
 	 * Logical operators
@@ -139,7 +139,7 @@ class Tx_VhCollection_ViewHelper_IfViewHelper extends Tx_Fluid_Core_ViewHelper_A
 			switch ($compareOperator) {
 				default:
 					break;
-				case '=': $conditionResult = ($test == $conditionParts[1]);
+				case '==': $conditionResult = ($test == $conditionParts[1]);
 					break;
 				case '!=': $conditionResult =  ($test == $conditionParts[1]);
 					break;
