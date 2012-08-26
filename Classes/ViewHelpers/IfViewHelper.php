@@ -147,9 +147,9 @@ class Tx_VhCollection_ViewHelper_IfViewHelper extends Tx_Fluid_Core_ViewHelper_A
 					break;
 				case '>=': $conditionResult =  (floatval($test) >= floatval($conditionParts[1]));
 					break;
-				case '<': $conditionResult =  ($test < $conditionParts[1]);
+				case '<': $conditionResult =  (floatval($test) < floatval($conditionParts[1]));
 					break;
-				case '<=': $conditionResult =  ($test <= $conditionParts[1]);
+				case '<=': $conditionResult =  (floatval($test) <= floatval($conditionParts[1]);
 			}
 		} else {
 			$test = $this->templateParser->parse($condition)->render($this->getRenderingContext());
